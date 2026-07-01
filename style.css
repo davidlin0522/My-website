@@ -1,0 +1,41 @@
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  /* no clip-path here anymore */
+}
+
+.cursor-star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #060000;
+  clip-path: polygon(56% 0, 63% 32%, 100% 30%, 49% 50%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 50% 50%);
+  transition: width 0.15s, height 0.15s, background 0.15s;
+}
+
+.cursor-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44px;
+  height: 44px;
+  border: 2px solid rgba(173, 73, 73, 0.6);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.custom-cursor.hovering .cursor-star {
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.4);
+}
